@@ -73,7 +73,7 @@ Admin Commands:
 
 1. More services will be added soon.
 2. Termux is not completely supported yet, might take a week or two.
-3. If you want any help you can ask [here](https://t.me/PatheticProgrammers)
+3. If you want any help you can ask [here](https://t.me/Mskoca)
 
 ## Credits
 1. `https://github.com/cyberboysumanjay/JioSaavnAPI` [For JioSaavnAPI]
