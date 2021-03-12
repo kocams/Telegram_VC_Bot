@@ -51,8 +51,8 @@ is_playing = False  # for restricting users while playing!
 @app.on_message(filters.command("repo") & ~filters.edited)
 async def repo(_, message: Message):
     await message.reply_text(
-        "[Github](https://github.com/thehamkercat/Telegram_vc_bot)"
-        + " | [Group](t.me/TheHamkerChat)",
+        "[Web](https://muhendisherif.com)"
+        + " | [Telegram](t.me/Mskoca)",
         disable_web_page_preview=True,
     )
 
@@ -326,8 +326,8 @@ async def ytplay(_, message: Message):
         thumbnail = results[0]["thumbnails"][0]
         duration = results[0]["duration"]
         views = results[0]["views"]
-        if time_to_seconds(duration)>=1800: #duration limit
-            await m.edit("Bruh! Only songs within 30 Mins")
+        if time_to_seconds(duration)>=18000: #duration limit
+            await m.edit("Bruh! Only songs within 5 hours")
             is_playing=False
             return    
     except Exception as e:
@@ -482,12 +482,12 @@ async def tgplay(_, message: Message):
 
     current_player = message.from_user.id
     if message.reply_to_message.audio:
-        if int(message.reply_to_message.audio.file_size) >= 104857600:
-            await message.reply_text('Bruh! Only songs within 100 MB')
+        if int(message.reply_to_message.audio.file_size) >= 524288000:
+            await message.reply_text('Bruh! Only songs within 500 MB')
             return
     elif message.reply_to_message.document:
-        if int(message.reply_to_message.document.file_size) >= 104857600:
-            await message.reply_text('Bruh! Only songs within 100 MB')
+        if int(message.reply_to_message.document.file_size) >= 524288000:
+            await message.reply_text('Bruh! Only songs within 500 MB')
             return
     is_playing = True
     m = await message.reply_text("Downloading")
@@ -692,6 +692,6 @@ async def users(client, message: Message):
 
 
 print(
-    "\nBot Starting...\nFor Support Join https://t.me/PatheticProgrammers\n"
+    "\nBot Starting...\nFor Support https://t.me/Mskoca\n"
 )
 app.run()
